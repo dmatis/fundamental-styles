@@ -59,7 +59,7 @@ To define the size of that column use the `fd-col--x` modifier, where x can go f
 <br/>
 
 ## Layout Grid for form
-To define the size of that column use the `fd-col--x` modifier, where x can go from 1-12, or 1-16 with the extra large size modifier.
+The form will be using a 4-7-1 grid. To create one use the following markup.
 {% capture size %}
 <div class ="fd-container__outer">
     <div class="fd-container">
