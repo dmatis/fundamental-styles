@@ -49,6 +49,12 @@ $blockRow: #{$fd-namespace}-row;
     &--inner-flex {
       display: flex;
     }
+
+    .#{$block} {
+      .#{$blockRow} + .#{$blockRow} {
+        margin-top: 0.5rem;
+      }
+    }
   }
 
   .#{$block} {
@@ -76,8 +82,7 @@ $blockRow: #{$fd-namespace}-row;
     }
 
     .#{$blockRow} {
-      margin-left: -0.25rem;
-      margin-right: -0.25rem;
+      margin: -0.25rem 0;
     }
   }
 }
@@ -102,6 +107,12 @@ $blockRow: #{$fd-namespace}-row;
 
   .#{$blockRow} {
     margin-bottom: 1rem;
+
+    .#{$block} {
+      .#{$blockRow} + .#{$blockRow} {
+        margin-top: 1rem;
+      }
+    }
   }
 
   .#{$block} {

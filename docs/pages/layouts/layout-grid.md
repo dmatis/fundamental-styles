@@ -33,7 +33,7 @@ Use the `fd-col` to create a column of a certain width. The default value will c
 
 
 ## Layout Grid with sizing (6 columns for all)
-To define the size of that column use the `fd-col--x` modifier, where x can go from 1-12, or 1-16 with the extra large size modifier.
+To define the size of that column use the `fd-col--x` modifier, where x can go from 1-12, or 1-16 with the extra large size modifier. All columns which do not fit in the space available will be placed in the next line with no top margin.
 {% capture size %}
     <div class="fd-container">
         <div class="fd-row">
@@ -77,7 +77,7 @@ The form will be using a 4-7-1 grid. To create one use the following markup.
 <br/>
 
 ##  Layout Grid with sizing and responsiveness
-Add the `fd-col--col-x--size` to define that column size only for a certain screen size and above
+Add the `fd-col--col-x--size` to define that column size only for a certain screen size and above.
 {% capture breakpoints %}
     <div class="fd-container">
         <div class="fd-row">
@@ -99,7 +99,7 @@ Add the `fd-col--col-x--size` to define that column size only for a certain scre
 
 
 ##  Layout Grid with nesting
-Add an extra `fd-row` class when using more than one row or nesting.
+Add an extra `fd-row` class when using more than one row or nesting. If it is not the first child it will add a gutter between that and the top row.
 {% capture layout-grid-multi-level %}
     <div class="fd-container">
         <div class="fd-row">
