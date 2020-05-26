@@ -9,81 +9,76 @@ $block: #{$fd-namespace}-col;
 $blockContainer: #{$fd-namespace}-container;
 $blockRow: #{$fd-namespace}-row;
 
-@media (min-width: 0) {
-  .#{$blockContainer} {
-    @include fd-reset();
+.#{$blockContainer} {
+  @include fd-reset();
 
-    display: flex;
-    flex-wrap: wrap;
-    flex: 0 0 100%;
-    position: relative;
-    margin: 0 -0.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 0 100%;
+  position: relative;
+  margin: 0 -0.25rem;
 
-    &--no-gap {
-      margin: 0;
-    }
+  &--no-gap {
+    margin: 0;
+  }
 
-    :last-child {
-      margin-bottom: 0;
-    }
-
-    .#{$blockRow} {
-      margin-left: 0;
-      margin-right: 0;
-    }
+  > *:last-child {
+    margin-bottom: 0;
   }
 
   .#{$blockRow} {
-    @include fd-reset();
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 
+.#{$blockRow} {
+  @include fd-reset();
+
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 0 100%;
+  position: relative;
+  margin: 0 -0.25rem 0.5rem -0.25rem;
+  min-width: 100%;
+
+  &--inner-flex {
     display: flex;
-    flex-wrap: wrap;
-    flex: 0 0 100%;
-    position: relative;
-    margin: 0 -0.25rem 0.5rem -0.25rem;
-
-    :last-child {
-      margin-bottom: 0;
-    }
-
-    &--inner-flex {
-      display: flex;
-    }
-
-    .#{$block} {
-      .#{$blockRow} + .#{$blockRow} {
-        margin-top: 0.5rem;
-      }
-    }
   }
 
   .#{$block} {
-    @include fd-reset();
-
-    padding: 0 0.25rem;
-    min-width: 100%;
-    max-width: 100%;
-
-    @for $n from 1 through 12 {
-      &--#{$n} {
-        min-width: ( ( $n / 12 ) *100%);
-        max-width: ( ( $n / 12 ) *100%);
-      }
+    .#{$blockRow} + .#{$blockRow} {
+      margin-top: 0.5rem;
     }
+  }
+}
 
-    @for $n from 1 through 12 {
-      &--offset-#{$n} {
-        margin-left: ( ( $n / 12 ) *100%);
-      }
-    }
+.#{$block} {
+  @include fd-reset();
 
-    &--no-gap {
-      padding: 0;
-    }
+  padding: 0 0.25rem;
+  min-width: 100%;
+  max-width: 100%;
 
-    .#{$blockRow} {
-      margin: -0.25rem 0;
+  @for $n from 1 through 12 {
+    &--#{$n} {
+      min-width: ( ( $n / 12 ) *100%);
+      max-width: ( ( $n / 12 ) *100%);
     }
+  }
+
+  @for $n from 1 through 12 {
+    &--offset-#{$n} {
+      margin-left: ( ( $n / 12 ) *100%);
+    }
+  }
+
+  &--no-gap {
+    padding: 0;
+  }
+
+  .#{$blockRow} {
+    margin: -0.25rem 0;
   }
 }
 
@@ -98,10 +93,6 @@ $blockRow: #{$fd-namespace}-row;
 
     &--no-gap {
       margin: 0;
-    }
-
-    :last-child {
-      margin-bottom: 0;
     }
   }
 

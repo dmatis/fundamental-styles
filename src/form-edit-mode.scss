@@ -1,12 +1,13 @@
 @import "./settings";
 @import "./mixins";
 @import "./functions";
+@import "./layout-grid.scss";
 
-$blockContainer: #{$fd-namespace}-form-edit-mode-container;
+$blockContainer: #{$fd-namespace}-form-edit-mode;
 $blockRow: #{$fd-namespace}-form-edit-mode-row;
 $block: #{$fd-namespace}-form-edit-mode;
 
-.#{$fd-namespace}-flex {
+.#{$block}-flex {
   min-width: 100%;
   max-width: 100%;
   display: flex;
@@ -19,155 +20,34 @@ $block: #{$fd-namespace}-form-edit-mode;
   }
 }
 
-.#{$blockContainer} {
-  @include fd-reset();
-
-  display: flex;
-  flex-wrap: wrap;
-  flex: 0 0 100%;
-  position: relative;
+.#{$block}-container {
   padding: 1rem;
   margin: 0 -0.25rem;
 
-  &--no-gap {
-    margin: 0;
-  }
-
-  :last-child {
+  .fd-row {
     margin-bottom: 0;
-  }
+    align-items: center;
 
-  .#{$blockRow} {
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  &--compact {
-    height: 2rem;
-  }
-}
-
-.#{$blockRow} {
-  @include fd-reset();
-
-  display: flex;
-  flex-wrap: wrap;
-  flex: 0 0 100%;
-  position: relative;
-  align-items: center;
-  margin-left: -0.25rem;
-  margin-right: -0.25rem;
-  height: 2.75rem;
-
-  :last-child {
-    margin-bottom: 0;
-  }
-
-  &--compact {
-    height: 2rem;
-  }
-
-  &--vertical {
-    margin-bottom: 0.625rem;
-    height: 100%;
-  }
-
-  .#{$blockRow} {
-    margin: 0 -0.25rem;
-  }
-
-  &--471 {
-    .#{$block}:nth-child(odd) {
-      @include fd-reset();
-
-      display: block;
-      min-width: ( ( 4 / 12 ) *100%);
-      max-width: ( ( 4 / 12 ) *100%);
+    .fd-col {
       padding: 0 0.25rem;
-      padding-right: 0.625rem;
-      text-align: right;
 
       .fd-form-label {
         margin-right: 0;
-        width: 100%;
       }
 
-      .#{$block}-flex {
-        min-width: 100%;
-        max-width: 100%;
-        display: flex;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        justify-content: flex-start;
-
-        &--right {
-          justify-content: flex-end;
-        }
-      }
-    }
-
-    .#{$block}:nth-child(even) {
-      @include fd-reset();
-
-      display: block;
-      padding: 0 0.25rem;
-      min-width: ( ( 7 / 12 ) *100%);
-      max-width: ( ( 7 / 12 ) *100%);
-
-      .#{$blockRow} {
+      .fd-row {
         margin: 0 -0.25rem;
-        min-width: 100%;
-        max-width: 100%;
-
-        @for $n from 1 through 12 {
-          &--#{$n} {
-            .#{$block} {
-              padding: 0 0.25rem;
-              min-width: (((12/$n)/12) *100%);
-              max-width: (((12/$n)/12) *100%);
-            }
-          }
-        }
       }
     }
   }
-}
 
-.#{$block} {
-  @include fd-reset();
-
-  display: block;
-  min-width: 100%;
-  max-width: 100%;
-  padding: 0 0.25rem;
-
-  @for $n from 1 through 12 {
-    &--#{$n} {
-      min-width: ( ( $n / 12 ) *100%);
-      max-width: ( ( $n / 12 ) *100%);
+  &--vertical {
+    > *:not(:last-child) {
+      margin-bottom: 0.625rem;
     }
-  }
-
-  @for $n from 1 through 12 {
-    &--offset-#{$n} {
-      margin-left: ( ( $n / 12 ) *100%);
-    }
-  }
-
-  &--no-gap {
-    padding: 0;
-  }
-
-  &--label {
-    padding-right: 0.625rem;
-    text-align: right;
 
     .fd-form-label {
-      margin-right: 0;
+      padding-bottom: 0.125rem;
     }
-  }
-
-  .#{$blockRow} {
-    margin: 0 -0.25rem;
   }
 }
