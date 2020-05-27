@@ -150,6 +150,7 @@ body {
 
 .input-playground.input-playground--full-width {
   width: 100%;
+  box-sizing: border-box;
 }
 
 .input-playground.input-playground--subheader {

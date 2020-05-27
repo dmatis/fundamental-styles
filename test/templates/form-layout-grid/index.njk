@@ -1,0 +1,127 @@
+{% extends "layout.njk" %}
+{% from "./../format.njk" import format %}
+{% from "./component.njk" import form_layout_grid %}
+
+{% block content %}
+
+{%- set div_playground %}
+<div class="panel-playground">Placeholder div</div>
+{% endset %}
+
+<h2>4-7-1 Grid (default)</h2>
+{% set example %}
+<div class="fd-container fd-form-layout-grid-container">
+    <div class="fd-row">
+        <div class="fd-col fd-col--4 fd-form-layout-grid-flex fd-form-layout-grid-flex--right">
+                <label class="label-playground" for="input-1">Default Input:</label>
+        </div>
+        <div class="fd-col fd-col--7">
+            <input class="input-playground input-playground--full-width" type="text" id="input-1" placeholder="Field placeholder text">
+        </div>
+    </div>
+    <div class="fd-row">
+        <div class="fd-col fd-col--4 fd-form-layout-grid-flex fd-form-layout-grid-flex--right">
+                <label class="label-playground" for="input-1c">Required Input: </label>
+        </div>
+        <div class="fd-col fd-col--7">
+            <input class="input-playground input-playground--full-width" type="text" id="input-2" placeholder="Field placeholder text">
+        </div>
+    </div>
+    <div class="fd-row">
+        <div class="fd-col fd-col--4 fd-form-layout-grid-flex fd-form-layout-grid-flex--right">
+                <label class="label-playground" for="input-2">2 Inputs: </label>
+        </div>
+        <div class="fd-col fd-col--7">
+            <div class="fd-row">
+                  <div class="fd-col fd-col--6">
+                      <input class="input-playground input-playground--full-width" type="text" id="input-3" placeholder="Field placeholder text">
+                  </div>
+                  <div class="fd-col fd-col--6">
+                      <input class="input-playground input-playground--full-width" type="text" id="input-4" placeholder="Field placeholder text">
+                  </div>
+              </div>
+          </div>
+    </div>
+</div>
+{% endset %}
+{{ format(example) }}
+
+<h2>4-7-1 Compact grid</h2>
+{% set example %}
+<div class="fd-container fd-form-layout-grid-container">
+    <div class="fd-row">
+        <div class="fd-col fd-col--4 fd-form-layout-grid-flex fd-form-layout-grid-flex--right">
+          <label class="label-playground" for="input-1">Default Input:</label>
+        </div>
+        <div class="fd-col fd-col--7">
+            <input class="input-playground input-playground--full-width input-playground--compact" type="text" id="input-5" placeholder="Field placeholder text">
+        </div>
+    </div>
+    <div class="fd-row">
+        <div class="fd-col fd-col--4 fd-form-layout-grid-flex fd-form-layout-grid-flex--right">
+          <label class="label-playground label-playground--required" for="input-1c">Required Input: </label>
+        </div>
+        <div class="fd-col fd-col--7">
+            <input class="input-playground input-playground--full-width input-playground--compact" type="text" id="input-6" placeholder="Field placeholder text">
+        </div>
+    </div>
+    <div class="fd-row">
+        <div class="fd-col fd-col--4 fd-form-layout-grid-flex fd-form-layout-grid-flex--right">
+          <label class="label-playground" for="input-2">2 Inputs: </label>
+        </div>
+        <div class="fd-col fd-col--7">
+            <div class="fd-row">
+                  <div class="fd-col fd-col--6">
+                      <input class="input-playground input-playground--full-width input-playground--compact" type="text" id="input-7" placeholder="Field placeholder text">
+                  </div>
+                  <div class="fd-col fd-col--6">
+                      <input class="input-playground input-playground--full-width input-playground--compact" type="text" id="input-8" placeholder="Field placeholder text">
+                  </div>
+              </div>
+          </div>
+    </div>
+</div>
+{% endset %}
+{{ format(example) }}
+
+<br><br>
+
+<h2>12 Column grid</h2>
+{% set example %}
+<div class="fd-container fd-form-layout-grid-container fd-form-layout-grid-container--vertical">
+    <div class="fd-row">
+        <div class="fd-col fd-col--12 fd-form-layout-grid-flex">
+          <label class="label-playground" for="input-1">Default Input:</label>
+        </div>
+        <div class="fd-col fd-col--12">
+            <input class="input-playground input-playground--full-width" type="text" id="input-9" placeholder="Field placeholder text">
+        </div>
+    </div>
+    <div class="fd-row">
+        <div class="fd-col fd-col--12 fd-form-layout-grid-flex">
+          <label class="label-playground label-playground--required" for="input-1c">Required Input: </label>
+        </div>
+        <div class="fd-col fd-col--12">
+            <input class="input-playground input-playground--full-width" type="text" id="input-10" placeholder="Field placeholder text">
+        </div>
+    </div>
+    <div class="fd-row">
+        <div class="fd-col fd-col--4 fd-form-layout-grid-flex">
+          <label class="label-playground" for="input-2">2 Inputs: </label>
+        </div>
+        <div class="fd-col fd-col--12">
+            <div class="fd-row">
+                  <div class="fd-col fd-col--6">
+                      <input class="input-playground input-playground--full-width" type="text" id="input-11" placeholder="Field placeholder text">
+                  </div>
+                  <div class="fd-col fd-col--6">
+                      <input class="input-playground input-playground--full-width" type="text" id="input-3" placeholder="Field placeholder text">
+                  </div>
+              </div>
+          </div>
+    </div>
+</div>
+{% endset %}
+{{ format(example) }}
+
+{% endblock %}

@@ -856,32 +856,26 @@ Do not use the checkbox control if:
 ## Form with 4-7-1 Layout
 
 {% capture form-edit %}
-<div class="fd-container fd-form-edit-mode-container">
+<div class="fd-container fd-form-layout-grid-container">
     <div class="fd-row">
-        <div class="fd-col fd-col--4">
-            <div class="fd-form-edit-mode-flex fd-form-edit-mode-flex--right">
-                <label class="fd-form-label" for="input-1">Default Input:</label>
-            </div>
+        <div class="fd-col fd-col--4 fd-form-layout-grid-flex fd-form-layout-grid-flex--right">
+          <label class="fd-form-label" for="input-1">Default Input:</label>
         </div>
         <div class="fd-col fd-col--7">
             <input class="fd-input" type="text" id="input-1" placeholder="Field placeholder text">
         </div>
     </div>
     <div class="fd-row">
-        <div class="fd-col fd-col--4">
-            <div class="fd-form-edit-mode-flex fd-form-edit-mode-flex--right">
-                <label class="fd-form-label fd-form-label--required" for="input-1c">Required Input: </label>
-            </div>
+        <div class="fd-col fd-col--4 fd-form-layout-grid-flex fd-form-layout-grid-flex--right">
+          <label class="fd-form-label fd-form-label--required" for="input-1c">Required Input: </label>
         </div>
         <div class="fd-col fd-col--7">
             <input class="fd-input" type="text" id="input-1" placeholder="Field placeholder text">
         </div>
     </div>
     <div class="fd-row">
-        <div class="fd-col fd-col--4">
-            <div class="fd-form-edit-mode-flex fd-form-edit-mode-flex--right">
-                <label class="fd-form-label" for="input-2">2 Inputs: </label>
-            </div>
+        <div class="fd-col fd-col--4 fd-form-layout-grid-flex fd-form-layout-grid-flex--right">
+          <label class="fd-form-label" for="input-2">2 Inputs: </label>
         </div>
         <div class="fd-col fd-col--7">
             <div class="fd-row">
@@ -904,32 +898,26 @@ Do not use the checkbox control if:
 ## Form with 4-7-1 compact Layout
 
 {% capture form-edit %}
-<div class="fd-container fd-form-edit-mode-container">
+<div class="fd-container fd-form-layout-grid-container">
     <div class="fd-row">
-        <div class="fd-col fd-col--4">
-            <div class="fd-form-edit-mode-flex fd-form-edit-mode-flex--right">
-                <label class="fd-form-label" for="input-1">Default Input:</label>
-            </div>
+        <div class="fd-col fd-col--4 fd-form-layout-grid-flex fd-form-layout-grid-flex--right">
+          <label class="fd-form-label" for="input-1">Default Input:</label>
         </div>
         <div class="fd-col fd-col--7">
             <input class="fd-input fd-input--compact" type="text" id="input-1" placeholder="Field placeholder text">
         </div>
     </div>
     <div class="fd-row">
-        <div class="fd-col fd-col--4">
-            <div class="fd-form-edit-mode-flex fd-form-edit-mode-flex--right">
-                <label class="fd-form-label fd-form-label--required" for="input-1c">Required Input: </label>
-            </div>
+        <div class="fd-col fd-col--4 fd-form-layout-grid-flex fd-form-layout-grid-flex--right">
+          <label class="fd-form-label fd-form-label--required" for="input-1c">Required Input: </label>
         </div>
         <div class="fd-col fd-col--7">
             <input class="fd-input fd-input--compact" type="text" id="input-1" placeholder="Field placeholder text">
         </div>
     </div>
     <div class="fd-row">
-        <div class="fd-col fd-col--4">
-            <div class="fd-form-edit-mode-flex fd-form-edit-mode-flex--right">
-                <label class="fd-form-label" for="input-2">2 Inputs: </label>
-            </div>
+        <div class="fd-col fd-col--4 fd-form-layout-grid-flex fd-form-layout-grid-flex--right">
+          <label class="fd-form-label" for="input-2">2 Inputs: </label>
         </div>
         <div class="fd-col fd-col--7">
             <div class="fd-row">
@@ -951,10 +939,10 @@ Do not use the checkbox control if:
 ## Form with 12 column Layout
 
 {% capture form-edit %}
-<div class="fd-container fd-form-edit-mode-container fd-form-edit-mode-container--vertical">
+<div class="fd-container fd-form-layout-grid-container fd-form-layout-grid-container--vertical">
     <div class="fd-row">
         <div class="fd-col fd-col--12">
-            <div class="fd-form-edit-mode-flex">
+            <div class="fd-form-layout-grid-flex">
                 <label class="fd-form-label" for="input-1">Default Input:</label>
             </div>
         </div>
@@ -964,7 +952,7 @@ Do not use the checkbox control if:
     </div>
     <div class="fd-row">
         <div class="fd-col fd-col--12">
-            <div class="fd-form-edit-mode-flex">
+            <div class="fd-form-layout-grid-flex">
                 <label class="fd-form-label fd-form-label--required" for="input-1c">Required Input: </label>
             </div>
         </div>
@@ -974,7 +962,7 @@ Do not use the checkbox control if:
     </div>
     <div class="fd-row">
         <div class="fd-col fd-col--4">
-            <div class="fd-form-edit-mode-flex">
+            <div class="fd-form-layout-grid-flex">
                 <label class="fd-form-label" for="input-2">2 Inputs: </label>
             </div>
         </div>

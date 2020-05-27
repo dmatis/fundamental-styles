@@ -3,13 +3,9 @@
 @import "./functions";
 @import "./layout-grid.scss";
 
-$blockContainer: #{$fd-namespace}-form-edit-mode;
-$blockRow: #{$fd-namespace}-form-edit-mode-row;
-$block: #{$fd-namespace}-form-edit-mode;
+$block: #{$fd-namespace}-form-layout-grid;
 
 .#{$block}-flex {
-  min-width: 100%;
-  max-width: 100%;
   display: flex;
   overflow: hidden;
   text-overflow: ellipsis;
