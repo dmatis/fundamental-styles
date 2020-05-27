@@ -8,6 +8,9 @@
 $block: #{$fd-namespace}-col;
 $blockContainer: #{$fd-namespace}-container;
 $blockRow: #{$fd-namespace}-row;
+$size: (12: "l", 16: "xl");
+$col-until-xl: 12;
+$col-xl: 16;
 
 .#{$blockContainer} {
   @include fd-reset();
@@ -60,16 +63,16 @@ $blockRow: #{$fd-namespace}-row;
   min-width: 100%;
   max-width: 100%;
 
-  @for $n from 1 through 12 {
+  @for $n from 1 through $col-until-xl {
     &--#{$n} {
-      min-width: ( ( $n / 12 ) *100%);
-      max-width: ( ( $n / 12 ) *100%);
+      min-width: ( ( $n / $col-until-xl ) *100%);
+      max-width: ( ( $n / $col-until-xl ) *100%);
     }
   }
 
-  @for $n from 1 through 12 {
+  @for $n from 1 through $col-until-xl {
     &--offset-#{$n} {
-      margin-left: ( ( $n / 12 ) *100%);
+      margin-left: ( ( $n / $col-until-xl ) *100%);
     }
   }
 
@@ -109,10 +112,10 @@ $blockRow: #{$fd-namespace}-row;
   .#{$block} {
     padding: 0 0.5rem;
 
-    @for $n from 1 through 12 {
+    @for $n from 1 through $col-until-xl {
       &--#{$n}--m {
-        min-width: ( ( $n / 12 ) *100%);
-        max-width: ( ( $n / 12 ) *100%);
+        min-width: ( ( $n / $col-until-xl ) *100%);
+        max-width: ( ( $n / $col-until-xl ) *100%);
       }
     }
 
@@ -128,10 +131,10 @@ $blockRow: #{$fd-namespace}-row;
 
 @media (min-width: 1024px) {
   .#{$block} {
-    @for $n from 1 through 12 {
-      &--#{$n}--l {
-        min-width: ( ( $n / 12 ) *100%);
-        max-width: ( ( $n / 12 ) *100%);
+    @for $n from 1 through $col-until-xl {
+      &--#{$n}--#{map-get($size,$col-until-xl)} {
+        min-width: ( ( $n / $col-until-xl ) *100%);
+        max-width: ( ( $n / $col-until-xl ) *100%);
       }
     }
   }
@@ -140,9 +143,9 @@ $blockRow: #{$fd-namespace}-row;
 @media (min-width: 1440px) {
   .#{$block} {
     @for $n from 1 through 16 {
-      &--#{$n}--xl {
-        min-width: ( ( $n / 16 ) *100%);
-        max-width: ( ( $n / 16 ) *100%);
+      &--#{$n}--#{map-get($size,$col-xl)} {
+        min-width: ( ( $n / $col-xl ) *100%);
+        max-width: ( ( $n / $col-xl ) *100%);
       }
     }
   }
