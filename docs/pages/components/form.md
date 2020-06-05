@@ -859,31 +859,31 @@ Do not use the checkbox control if:
 <div class="fd-container fd-form-layout-grid-container">
     <div class="fd-row">
         <div class="fd-col fd-col--4 fd-form-layout-grid-flex fd-form-layout-grid-flex--right">
-          <label class="fd-form-label" for="input-1">Default Input:</label>
+          <label class="fd-form-label" for="input-1-layout">Default Input:</label>
         </div>
         <div class="fd-col fd-col--7">
-            <input class="fd-input" type="text" id="input-1" placeholder="Field placeholder text">
+            <input class="fd-input" type="text" id="input-1-layout" placeholder="Field placeholder text">
         </div>
     </div>
     <div class="fd-row">
         <div class="fd-col fd-col--4 fd-form-layout-grid-flex fd-form-layout-grid-flex--right">
-          <label class="fd-form-label fd-form-label--required" for="input-1c">Required Input: </label>
+          <label class="fd-form-label fd-form-label--required" for="input-1c-layout">Required Input: </label>
         </div>
         <div class="fd-col fd-col--7">
-            <input class="fd-input" type="text" id="input-1" placeholder="Field placeholder text">
+            <input class="fd-input" type="text" id="input-1c-layout" placeholder="Field placeholder text">
         </div>
     </div>
-    <div class="fd-row">
+    <div class="fd-row" role="group" aria-labelledby="groupLabel">
         <div class="fd-col fd-col--4 fd-form-layout-grid-flex fd-form-layout-grid-flex--right">
-          <label class="fd-form-label" for="input-2">2 Inputs: </label>
+          <label class="fd-form-label" id="groupLabel" for="input-2">2 Inputs: </label>
         </div>
         <div class="fd-col fd-col--7">
             <div class="fd-row">
                   <div class="fd-col fd-col--6">
-                      <input class="fd-input" type="text" id="input-2" placeholder="Field placeholder text">
+                      <input class="fd-input" type="text" id="input1-of-2" aria-label="input1-of-2" placeholder="Field placeholder text">
                   </div>
                   <div class="fd-col fd-col--6">
-                      <input class="fd-input" type="text" id="input-3" placeholder="Field placeholder text">
+                      <input class="fd-input" type="text" id="input2-of-2" aria-label="input2-of-2" placeholder="Field placeholder text">
                   </div>
               </div>
           </div>
@@ -901,35 +901,35 @@ Do not use the checkbox control if:
 <div class="fd-container fd-form-layout-grid-container">
     <div class="fd-row">
         <div class="fd-col fd-col--4 fd-form-layout-grid-flex fd-form-layout-grid-flex--right">
-          <label class="fd-form-label" for="input-1">Default Input:</label>
+          <label class="fd-form-label" for="input-1-compact">Default Input:</label>
         </div>
         <div class="fd-col fd-col--7">
-            <input class="fd-input fd-input--compact" type="text" id="input-1" placeholder="Field placeholder text">
+            <input class="fd-input fd-input--compact" type="text" id="input-1-compact" placeholder="Field placeholder text">
         </div>
     </div>
     <div class="fd-row">
         <div class="fd-col fd-col--4 fd-form-layout-grid-flex fd-form-layout-grid-flex--right">
-          <label class="fd-form-label fd-form-label--required" for="input-1c">Required Input: </label>
+          <label class="fd-form-label fd-form-label--required" for="input-1b-compact">Required Input: </label>
         </div>
         <div class="fd-col fd-col--7">
-            <input class="fd-input fd-input--compact" type="text" id="input-1" placeholder="Field placeholder text">
+            <input class="fd-input fd-input--compact" type="text" id="input-1b-compact" placeholder="Field placeholder text">
         </div>
     </div>
-    <div class="fd-row">
+    <div class="fd-row" role="group" aria-labelledby="groupLabel-compact">
         <div class="fd-col fd-col--4 fd-form-layout-grid-flex fd-form-layout-grid-flex--right">
-          <label class="fd-form-label" for="input-2">2 Inputs: </label>
+          <label class="fd-form-label"  id="groupLabel-compact">2 Inputs: </label>
         </div>
         <div class="fd-col fd-col--7">
             <div class="fd-row">
                   <div class="fd-col fd-col--6">
-                      <input class="fd-input fd-input--compact" type="text" id="input-2" placeholder="Field placeholder text">
+                      <input class="fd-input fd-input--compact" type="text" id="input1-of-2-compact" aria-label="input1-of-2-compact" placeholder="Field placeholder text">
                   </div>
                   <div class="fd-col fd-col--6">
-                      <input class="fd-input fd-input--compact" type="text" id="input-3" placeholder="Field placeholder text">
+                      <input class="fd-input fd-input--compact" type="text" id="input2-of-2-compact" aria-label="input2-of-2-compact" placeholder="Field placeholder text">
                   </div>
               </div>
           </div>
-    </div>
+      </div>
 </div>
 {% endcapture %}
 {% include display-component.html component=form-edit %}
@@ -943,36 +943,36 @@ Do not use the checkbox control if:
     <div class="fd-row">
         <div class="fd-col fd-col--12">
             <div class="fd-form-layout-grid-flex">
-                <label class="fd-form-label" for="input-1">Default Input:</label>
+                <label class="fd-form-label" for="input-1-horiztonal">Default Input:</label>
             </div>
         </div>
         <div class="fd-col fd-col--12">
-            <input class="fd-input" type="text" id="input-1" placeholder="Field placeholder text">
+            <input class="fd-input" type="text" id="input-1-horiztonal" placeholder="Field placeholder text">
         </div>
     </div>
     <div class="fd-row">
         <div class="fd-col fd-col--12">
             <div class="fd-form-layout-grid-flex">
-                <label class="fd-form-label fd-form-label--required" for="input-1c">Required Input: </label>
+                <label class="fd-form-label fd-form-label--required" for="input-1-horizontal">Required Input: </label>
             </div>
         </div>
         <div class="fd-col fd-col--12">
-            <input class="fd-input" type="text" id="input-1" placeholder="Field placeholder text">
+            <input class="fd-input" type="text" id="input-1-horizontal" placeholder="Field placeholder text">
         </div>
     </div>
-    <div class="fd-row">
+    <div class="fd-row" role="group" aria-labelledby="groupLabel-horizontal">
         <div class="fd-col fd-col--4">
             <div class="fd-form-layout-grid-flex">
-                <label class="fd-form-label" for="input-2">2 Inputs: </label>
+                <label class="fd-form-label" id="groupLabel-horizontal">2 Inputs: </label>
             </div>
         </div>
         <div class="fd-col fd-col--12">
             <div class="fd-row">
                   <div class="fd-col fd-col--6">
-                      <input class="fd-input" type="text" id="input-2" placeholder="Field placeholder text">
+                      <input class="fd-input" type="text" id="input-2-horizontal" aria-label="input1-of-2-horizontal" placeholder="Field placeholder text">
                   </div>
                   <div class="fd-col fd-col--6">
-                      <input class="fd-input" type="text" id="input-3" placeholder="Field placeholder text">
+                      <input class="fd-input" type="text" id="input-3-horizontal" aria-label="input2-of-2-horizontal" placeholder="Field placeholder text">
                   </div>
               </div>
           </div>
